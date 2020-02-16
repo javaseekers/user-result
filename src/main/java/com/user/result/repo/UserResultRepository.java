@@ -15,4 +15,7 @@ public interface UserResultRepository
 
 	public List<UserResultEntity> getByEmail(String email);
 
+	public UserResultEntity getByEmailAndTestSeries(String email,
+		String testSeries);
+
 }
