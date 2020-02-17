@@ -7,6 +7,6 @@ import com.result.entity.ResultEntity;
 @Repository
 public interface ResultRepository extends JpaRepository<ResultEntity, Integer> {
 
-	ResultEntity getResultByEmail(String email);
+	ResultEntity getResultByEmailAndTestSeries(String email, String testSeries);
 
 }
