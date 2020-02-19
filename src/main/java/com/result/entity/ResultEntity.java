@@ -19,6 +19,7 @@ public @Data class ResultEntity {
 	private String email;
 	@Column(name="score")
 	private int score;
+	
 	@Column(name="test_series")
 	private String testSeries;
 	
