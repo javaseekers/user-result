@@ -33,9 +33,11 @@ public class UserResultService
 		UserResultEntity userResultEntity = userResultRepository
 			.getByEmailAndTestSeries(email, testSeries);
 		
+		
 		UserResultBo userResultBo = restTemplate.getForObject(
 			"http://localhost:2022/userApi/users/" + email,
 			UserResultBo.class);
+		
 		
 		userResultBo.setUserResultEntity(userResultEntity);
 
