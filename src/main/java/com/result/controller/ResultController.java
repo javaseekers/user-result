@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.result.entity.UserResultBo;
+import com.result.dto.UserResultDTO;
 import com.result.service.ResultServiceImpl;
 
 @RestController
@@ -17,7 +17,7 @@ public class ResultController {
 	ResultServiceImpl resultServiceImpl;
 
 	@GetMapping("{email}/{testSeries}")
-	public ResponseEntity<UserResultBo> getByEmail(@PathVariable String email,@PathVariable String testSeries) {
+	public ResponseEntity<UserResultDTO> getByEmail(@PathVariable String email,@PathVariable String testSeries) {
 
 		return ResponseEntity.ok().body(resultServiceImpl.getByEmailAndTestSeries(email,testSeries));
 
