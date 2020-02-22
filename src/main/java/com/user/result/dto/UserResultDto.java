@@ -1,8 +1,10 @@
-package com.user.result.entity;
+package com.user.result.dto;
+
+import com.user.result.entity.UserResultEntity;
 
 import lombok.Data;
 
-public @Data class UserResultBo
+public @Data class UserResultDto
 {
 	private String firstName;
 	private String lastName;

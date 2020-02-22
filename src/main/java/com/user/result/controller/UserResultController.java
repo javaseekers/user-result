@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.user.result.entity.UserResultBo;
+import com.user.result.dto.UserResultDto;
 import com.user.result.entity.UserResultEntity;
 import com.user.result.service.UserResultService;
 
@@ -35,7 +35,7 @@ public class UserResultController
 		userResultService.submit(resultEntity);
 	}
 	@GetMapping("result/{email}/{testSeries}")
-	public ResponseEntity<UserResultBo> getUserResult(
+	public ResponseEntity<UserResultDto> getUserResult(
 		@PathVariable("email") String email,
 		@PathVariable("testSeries") String testSeries)
 	{
